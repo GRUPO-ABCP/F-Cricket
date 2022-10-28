@@ -7,12 +7,16 @@ class Execution extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: const [],
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => ChangeNotifier() 
+        ),
+      ],
       child: MaterialApp(
         home: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) {
             return Container(
-              color: Colors.green,
+              color: Colors.blueAccent,
             );
           },
         ),
